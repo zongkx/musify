@@ -1,0 +1,69 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 2px 50px #ccc;
+  overflow: scroll;
+  transform: translate(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.library h2 {
+  padding: 2rem;
+}
+.library-song {
+  display: flex;
+  align-items: center;
+    /* 列表缩进 */
+  padding: 1rem 1rem 1rem 1rem;
+  cursor: pointer;
+  /* 设置列表高度 */
+  height: 15px;
+  transition: background 0.5s ease;
+}
+.library-song img {
+  width: 30%;
+}
+.library-song:hover {
+  background: #dedeff;
+}
+.song-description {
+  padding-left: 1rem;
+}
+.song-description h3 {
+  font-size: 1rem;
+}
+.song-description h4 {
+  font-size: 0.7rem;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparents;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+.selected {
+  background: #b9cfff;
+}
+.active-library {
+  transform: translate(0%);
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .library {
+    /* 设置列表整体宽度 */
+    width: 50%;
+  }
+}
